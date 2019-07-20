@@ -6,7 +6,73 @@
   </head>
   <body>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS, уровень 2</a>».</p>
+    <header class="page-header">
+      <a class="page-header__logo logo">
+        <img class="logo__image" src="http://placehold.it/75x22" width="75" height="22" alt="Фотоприложение PINK">
+      </a>
+      <nav class="main-nav">
+        <button class="main-nav__toggle" type="button">Открыть меню</button>
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item site-list__item--active">
+            <a>Главная</a>
+          </li>
+          <li class="site-list__item">
+            <a href="photo.html">Фотографии</a>
+          </li>
+          <li class="site-list__item">
+            <a href="form.html">Конкурс</a>
+          </li>
+          <li class="site-list__item">
+            <a href="#">HTML Academy</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="page-main">
+
+      <h1 class="visually-hidden">Фотоприложение PINK для раскрашивания серых будней</h1>
+
+      <section class="introduction">
+        <h2 class="introduction__title">Взгляните на жизнь иначе!</h2>
+        <div class="introduction__loads loads">
+          <a class="loads__main-link" href="#">Скачать приложение</a>
+          <ul class="loads__list">
+            <li class="loads__item">
+              <a class="loads__link loads__link--apple" href="#">App store</a>
+            </li>
+            <li class="loads__item">
+              <a class="loads__link loads__link--android" href="#">Google Play</a>
+            </li>
+            <li class="loads__item">
+              <a class="loads__link loads__link--win" href="#">Windows</a>
+            </li>
+          </ul>
+          <p class="loads__legend">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+        </div>
+      </section>
+
+      <section class="advantages">
+        <h2 class="visually-hidden">Наши преимущества</h2>
+        <p class="advantages__intro">Устали от серости мегаполиса?</p>
+        <p class="advantages__intro">Нам есть, что вам предложить!</p>
+        <ul class="advantages__list">
+          <li class="advantages__item">
+            <h3 class="advantages__title">Поднимает настроение</h3>
+            <p class="advantages__description">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+          </li>
+          <li class="advantages__item">
+            <h3 class="advantages__title">Меняет мир вокруг</h3>
+            <p class="advantages__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+          </li>
+          <li class="advantages__item">
+            <h3 class="advantages__title">Заводит новых друзей</h3>
+            <p class="advantages__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+          </li>
+        </ul>
+      </section>
+
+    </main>
 
   </body>
 </html>
