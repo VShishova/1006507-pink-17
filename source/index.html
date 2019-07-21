@@ -3,12 +3,13 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
 
     <header class="page-header">
       <a class="page-header__logo logo">
-        <img class="logo__image" src="http://placehold.it/75x22" width="75" height="22" alt="Фотоприложение PINK">
+        <img class="logo__image" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Фотоприложение PINK">
       </a>
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button">Открыть меню</button>
@@ -31,25 +32,25 @@
 
     <main class="page-main">
 
-      <h1 class="visually-hidden">Фотоприложение PINK для раскрашивания серых будней</h1>
+      <div class="page-main__intro-wrapper">
+        <h1 class="visually-hidden">Фотоприложение PINK для раскрашивания серых будней</h1>
+        <p class="page-main__slogan">Взгляните на жизнь иначе!</p>
+      </div>
 
-      <section class="introduction">
-        <h2 class="introduction__title">Взгляните на жизнь иначе!</h2>
-        <div class="introduction__loads loads">
-          <a class="loads__main-link" href="#">Скачать приложение</a>
-          <ul class="loads__list">
-            <li class="loads__item">
-              <a class="loads__link loads__link--apple" href="#">App store</a>
-            </li>
-            <li class="loads__item">
-              <a class="loads__link loads__link--android" href="#">Google Play</a>
-            </li>
-            <li class="loads__item">
-              <a class="loads__link loads__link--win" href="#">Windows</a>
-            </li>
-          </ul>
-          <p class="loads__legend">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
-        </div>
+      <section class="loads">
+        <a class="loads__main-link" href="#">Скачать приложение</a>
+        <ul class="loads__list">
+          <li class="loads__item">
+            <a class="loads__link loads__link--apple" href="#">App store</a>
+          </li>
+          <li class="loads__item">
+            <a class="loads__link loads__link--android" href="#">Google Play</a>
+          </li>
+          <li class="loads__item">
+            <a class="loads__link loads__link--win" href="#">Windows</a>
+          </li>
+        </ul>
+        <p class="loads__legend">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
       </section>
 
       <section class="advantages">
