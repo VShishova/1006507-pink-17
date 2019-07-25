@@ -1,7 +1,18 @@
+.logo {
+  width: 75px;
+  height: 22px;
+}
+
 .logo__image {
-  background-color: #1d2631;
+  background-color: @bg-darkblue;
 
   &--footer {
     background-color: white;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .logo {
+    height: 40px;
   }
 }

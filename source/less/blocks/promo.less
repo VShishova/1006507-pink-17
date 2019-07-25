@@ -1,0 +1,50 @@
+.promo {
+  display: none;
+  padding: 100px 20px;
+}
+
+.promo__slogan {
+  margin: 0;
+  margin-bottom: 15px;
+
+  color: black;
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+}
+
+.promo__content {
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.promo__link {
+  color: #d22856;
+}
+
+@media (min-width: @tablet-width) {
+  .promo {
+    display: block;
+
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .promo__wrapper {
+    width: 50%;
+    margin-left: auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .promo {
+    padding-left: 120px;
+    padding-right: 120px;
+
+    background-color: @bg-lightgray;
+  }
+
+  .promo__wrapper {
+    width: 60%;
+  }
+}
