@@ -12,7 +12,7 @@
   // background-size: cover;
 }
 
-.page-header__menu-wrapper {
+.page-header__container {
   display: flex;
   flex-direction: column;
 }
@@ -24,8 +24,6 @@
 }
 
 .page-header__intro-wrapper {
-  margin: 0 20px;
-
   &--inner-page {
     height: 173px;
   }
@@ -37,7 +35,6 @@
 }
 
 .page-header__slogan {
-  margin: 0;
   margin-top: 30px;
   margin-bottom: 150px;
 
@@ -47,7 +44,15 @@
   text-align: center;
 }
 
+.page-header__container.container {
+  width: @mobile-width;
+}
+
 @media (min-width: @tablet-width) {
+  .page-header__container.container {
+    width: @tablet-width;
+  }
+
   .page-header__logo {
     padding-top: 27px;
     padding-bottom: 42px;
@@ -79,7 +84,11 @@
 }
 
 @media (min-width: @desktop-width) {
-  .page-header__menu-wrapper {
+  .page-header__container.container {
+    width: 940px;
+  }
+
+  .page-header__container {
     flex-direction: row;
     justify-content: space-between;
 
