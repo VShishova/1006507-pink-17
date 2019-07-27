@@ -2,40 +2,48 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
     <title>HTML Academy: Пинк</title>
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
 
     <header class="page-header">
-      <a class="page-header__logo logo" href="index.html">
-        <img class="logo__image" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Фотоприложение PINK">
-      </a>
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item">
-            <a href="index.html">Главная</a>
-          </li>
-          <li class="site-list__item">
-            <a href="photo.html">Фотографии</a>
-          </li>
-          <li class="site-list__item site-list__item--active">
-            <a>Конкурс</a>
-          </li>
-          <li class="site-list__item">
-            <a href="#">HTML Academy</a>
-          </li>
-        </ul>
-      </nav>
+      <div class="page-header__menu-wrapper">
+        <div class="page-header__container container">
+          <a class="page-header__logo logo" href="index.html">
+            <img class="logo__image" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Фотоприложение PINK">
+          </a>
+          <nav class="main-nav">
+            <!-- <button class="main-nav__toggle" type="button">Открыть меню</button> -->
+            <ul class="main-nav__list">
+              <li class="main-nav__item">
+                <a href="index.html">Главная</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="photo.html">Фотографии</a>
+              </li>
+              <li class="main-nav__item main-nav__item--active">
+                <a>Конкурс</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#">HTML Academy</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="page-header__intro-wrapper page-header__intro-wrapper--inner-page container">
+        <p class="page-header__slogan">Конкурс на самое безбашенное путешествие с Пинк</p>
+      </div>
     </header>
 
     <main class="page-inner">
-      <h1 class="page-inner__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
+      <h1 class="visually-hidden">Конкурс пользователей</h1>
     </main>
 
-    <footer class="page-footer">
+    <footer class="page-footer container">
       <a class="page-footer__logo logo" href="index.html">
         <img class="logo__image logo__image--footer" src="img/logo-pink-blue-mobile.svg" width="147" height="40" alt="Фотоприложение PINK">
       </a>
