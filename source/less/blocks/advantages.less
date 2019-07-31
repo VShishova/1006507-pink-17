@@ -13,13 +13,13 @@
 }
 
 .advantages__intro:last-of-type {
-  margin-bottom: 65px;
+  margin-bottom: 40px;
 }
 
 .advantages__list-wrapper {
   position: relative;
 
-  padding-top: 50px;
+  padding-top: 75px;
 
   background-color: @bg-lightgray;
   background-image: url("../img/bg-triangle-white.svg");
@@ -27,42 +27,44 @@
   background-position: 50% 0;
   background-size: 101% auto;
   text-align: center;
-  // &::before {
-  //   content: "";
-  //   position: absolute;
-  //   left: 0;
-  //   top: -35px;
-
-  //   width: @mobile-width;
-  //   height: 35px;
-
-  //   background-color: @bg-lightgray;
-  //   background-image: url("../img/bg-triangle-white.svg");
-  //   background-repeat: no-repeat;
-  //   background-position: 50% 0;
-  //   background-size: 101% auto;
-  //   // fill: white;
-  // }
 }
 
 .advantages__list {
   margin: 0;
   padding: 0;
+  padding-bottom: 320px;
 
   list-style: none;
 }
 
 .advantages__item {
-  margin-bottom: 35px;
+  position: relative;
+  margin-bottom: 31px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 150px;
+
+    background-repeat: no-repeat;
+    transform: translateX(-50%);
+  }
 }
 
 .advantages__item:last-child {
   margin-bottom: 0;
+
+  &::after {
+    width: 157px;
+    height: 278px;
+
+    background-image: url("../img/iphone-screen-mobile@1x.png");
+  }
 }
 
 .advantages__title {
   margin: 0;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 
   font-size: 18px;
   color: black;
@@ -72,18 +74,53 @@
   margin: 0;
 }
 
+.advantages__description br {
+  display: none;
+}
+
 @media (min-width: @tablet-width) {
+  .advantages {
+    padding-top: 48px;
+  }
+
   .advantages__list {
     margin-left: auto;
+    padding-bottom: 40px;
     width: 310px;
 
     text-align: left;
   }
 
+  .advantages__item {
+    margin-bottom: 35px;
+
+    &::after {
+      top: 0;
+      transform: translate(-113%, -74%);
+    }
+  }
+
+  .advantages__item:last-child {
+    &::after {
+      width: 270px;
+      height: 480px;
+
+      background-image: url("../img/iphone-screen-3-tablet@1x.png");
+    }
+  }
+
   .advantages__intro {
     margin-bottom: 0;
     font-size: 40px;
-    line-height: normal;
+    line-height: 49px;
+  }
+
+  .advantages__intro:last-of-type {
+    margin-bottom: 45px;
+  }
+
+  .advantages__description br {
+    display: inline;
   }
 }
 

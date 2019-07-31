@@ -65,12 +65,23 @@ img {
 
 .container {
   margin: 0 auto;
-  width: 280px;
+  width: @mobile-width - 40px;
+
+  &--header {
+    background-image: url("../img/iphone-hand-mobile@1x.png");
+    background-repeat: no-repeat;
+    background-position: left 85px;
+  }
 }
 
 @media (min-width: @tablet-width) {
   .container {
-    width: 620px;
+    width: @tablet-width - 40px;
+
+    &--header {
+      background-image: url("../img/iphone-hand-tablet@1x.png");
+      background-position: -35px -18px;
+    }
   }
 }
 
