@@ -80,13 +80,18 @@ img {
 
     &--header {
       background-image: url("../img/iphone-hand-tablet@1x.png");
-      background-position: -35px -18px;
+      background-position: -35px -17px;
     }
   }
 }
 
 @media (min-width: @desktop-width) {
   .container {
-    width: 940px;
+    width: @desktop-width  - 260px;
+
+    &--header {
+      background-image: url("../img/iphone-hand-desktop@1x.png");
+      background-position: 17px -8px;
+    }
   }
 }

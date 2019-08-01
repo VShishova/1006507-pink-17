@@ -11,8 +11,13 @@
 }
 
 .promo__time {
+  position: relative;
   display: block;
-  padding: 32px 41px;
+  margin-left: 20px;
+  margin-top: 17px;
+  padding: 0 32px;
+  padding-top: 17px;
+  padding-bottom: 27px;
 
   color: #d22856;
   font-size: 96px;
@@ -22,8 +27,20 @@
   border: 15px solid #d22856;
   border-radius: 50%;
 
-  background-image: url("../img/icon-timer.svg");
-  background-repeat: no-repeat;
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: -32px;
+    top: -69px;
+
+    width: 238px;
+    height: 276px;
+
+    background-image: url("../img/icon-timer.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
 }
 
 .promo__info-wrapper {
@@ -62,10 +79,47 @@
 
 @media (min-width: @desktop-width) {
   .promo {
+    padding: 122px 0;
+
     background-color: @bg-lightgray;
   }
 
   .promo__info-wrapper {
-    width: 60%;
+    padding-right: 52px;
+    width: 61%;
+  }
+
+  .promo__time {
+    margin-left: 23px;
+    margin-top: -20px;
+    padding: 0 43px;
+    padding-top: 37px;
+    padding-bottom: 53px;
+
+    font-size: 120px;
+  }
+
+  .promo__slogan {
+    margin-bottom: 21px;
+  }
+
+  .promo__slogan br {
+    display: none;
+  }
+
+  .promo__content {
+    margin-bottom: 31px;
+
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .promo__content br {
+    display: none;
+  }
+
+  .promo__link {
+    font-size: 18px;
+    line-height: 30px;
   }
 }
