@@ -1,31 +1,139 @@
 .loads {
+  position: relative;
+  z-index: 1;
+
+  padding-top: 25px;
+  padding-bottom: 30px;
   text-align: center;
+  background-color: @bg-darkblue;
+}
+
+.loads .container {
+  width: @mobile-width - 40px;
 }
 
 .loads__list {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 
+  margin: 0;
+  margin-bottom: 19px;
   padding: 0;
+
   list-style: none;
 }
 
+.loads__item {
+  margin-right: 35px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
 .loads__link {
+  position: relative;
+  display: block;
+
+  width: 47px;
+  height: 56px;
+
   color: inherit;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+
+    transform: translate(-50%, -50%);
+  }
+
+  &--apple::after {
+    width: 47px;
+    height: 56px;
+
+    background-image: url("../img/logo-apple.svg");
+  }
+
+  &--android::after {
+    width: 43px;
+    height: 47px;
+
+    background-image: url("../img/logo-android.svg");
+  }
+
+  &--win::after {
+    width: 44px;
+    height: 41px;
+
+    background-image: url("../img/logo-microsoft.svg");
+  }
 }
 
 .loads__main-link {
   display: block;
+
+  padding: 17px 0;
+  margin-bottom: 33px;
+  width: 274px;
+
+  border: 3px solid white;
+  border-radius: 35px;
 
   color: inherit;
   text-decoration: none;
   font-size: 18px;
   line-height: 18px;
   font-weight: 700;
-
-  padding-top: 28px;
 }
 
 .loads__legend {
+  margin: 0;
+
   font-weight: 300;
+}
+
+@media (min-width: @tablet-width) {
+  .loads {
+    background-color: transparent;
+    padding: 30px 0;
+  }
+
+  .loads .container {
+    width: auto;
+  }
+
+  .loads__main-link {
+    margin-bottom: 45px;
+    width: auto;
+  }
+
+  .loads__list {
+    margin-bottom: 35px;
+  }
+
+  .loads__legend {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .loads {
+    padding: 49px 0;
+  }
+
+  .loads__main-link {
+    margin-bottom: 68px;
+
+    font-size: 21px;
+  }
+
+  .loads__list {
+    margin-bottom: 53px;
+  }
 }

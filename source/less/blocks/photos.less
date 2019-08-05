@@ -1,6 +1,6 @@
 .photos__intro {
-  margin-top: 50px;
-  margin-bottom: 40px;
+  margin-top: 45px;
+  margin-bottom: 49px;
   padding: 0 17px;
 
   text-align: center;
@@ -16,17 +16,32 @@
 
 .photos__item {
   margin-bottom: 20px;
+
+  &--main img {
+    position: relative;
+    left: -20px;
+    max-width: @mobile-width;
+  }
+}
+
+.photos__image {
+  vertical-align: top;
 }
 
 .photos__info-wrapper {
-  margin-top: -8px;
-  padding: 25px 17px;
+  padding: 19px 17px;
+  padding-bottom: 22px;
 
   background-color: @bg-lightgray;
 }
 
 .photos__author {
   margin: 0;
+}
+
+.photos__comment {
+  margin: 0;
+  margin-bottom: 7px;
 }
 
 .photos__time {
@@ -36,9 +51,25 @@
 }
 
 .photos__likes {
+  position: relative;
+  margin-left: 31px;
+
   font-size: 12px;
   text-transform: uppercase;
   color: #d22856;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: -31px;
+    top: 3px;
+
+    width: 13px;
+    height: 12px;
+
+    background-image: url("../img/icon-heart.svg");
+    background-repeat: no-repeat;
+  }
 }
 
 @media (min-width: @tablet-width) {
