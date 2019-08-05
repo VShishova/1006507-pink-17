@@ -66,34 +66,16 @@ img {
 .container {
   margin: 0 auto;
   width: @mobile-width - 40px;
-
-  &--header {
-    padding-top: 1px;
-
-    background-image: url("../img/iphone-hand-mobile@1x.png");
-    background-repeat: no-repeat;
-    background-position: left 109px;
-  }
 }
 
 @media (min-width: @tablet-width) {
   .container {
     width: @tablet-width - 40px;
-
-    &--header {
-      background-image: url("../img/iphone-hand-tablet@1x.png");
-    }
   }
 }
 
 @media (min-width: @desktop-width) {
   .container {
     width: @desktop-width  - 260px;
-
-    &--header {
-      background-image: url("../img/iphone-hand-desktop@1x.png");
-      background-size: 1050px 645px;
-      background-position: 18px 98px;
-    }
   }
 }
