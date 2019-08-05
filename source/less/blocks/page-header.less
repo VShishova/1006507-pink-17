@@ -32,24 +32,12 @@
 }
 
 .page-header__intro-wrapper {
-  position: relative;
-  z-index: 1;
-
-  &::after {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    top: 86px;
-
-    width: 320px;
-    height: 314px;
-
-    background-image: url("../img/iphone-hand-mobile@1x.png");
-    background-repeat: no-repeat;
+  &--inner-page {
+    height: 137px;
   }
 
-  &--inner-page {
-    height: 108px;
+  &--inner-page::after {
+    display: none;
   }
 
   &--inner-page .page-header__slogan {
@@ -59,6 +47,9 @@
 }
 
 .page-header__slogan {
+  position: relative;
+  z-index: 1;
+
   width: 300px;
   margin: 0 auto;
   margin-top: 24px;
@@ -69,6 +60,20 @@
   line-height: 28px;
   font-weight: 300;
   text-align: center;
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 86px;
+    left: -10px;
+
+    width: 320px;
+    height: 314px;
+
+    background-image: url("../img/iphone-hand-mobile@1x.png");
+    background-repeat: no-repeat;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -76,6 +81,10 @@
     background-image: url("../img/bg-back-tablet@1x.jpg");
     background-position: center 259px;
     background-size: cover;
+  }
+
+  .page-header .container {
+    width: @tablet-width;
   }
 
   .page-header__logo {
@@ -91,21 +100,21 @@
 
     font-size: 40px;
     line-height: 49px;
+
+    &::after {
+      width: 660px;
+      height: 545px;
+      top: -17px;
+      left: -95px;
+
+      background-image: url("../img/iphone-hand-tablet@1x.png");
+    }
   }
 
   .page-header__intro-wrapper {
     width: 300px;
     margin-left: 20px;
     padding-bottom: 80px;
-
-    &::after {
-      width: 660px;
-      height: 545px;
-      top: -17px;
-      left: -38px;
-
-      background-image: url("../img/iphone-hand-tablet@1x.png");
-    }
 
     &--inner-page {
       width: auto;
@@ -132,10 +141,6 @@
     background-color: rgba(0, 0, 0, 0.3);
   }
 
-  .page-header__container.container {
-    width: 940px;
-  }
-
   .page-header__container {
     flex-direction: row;
     justify-content: space-between;
@@ -151,6 +156,14 @@
   .page-header__intro-wrapper {
     padding-bottom: 73px;
     margin-left: 0;
+  }
+
+  .page-header__slogan {
+    width: auto;
+    margin-top: 108px;
+
+    font-size: 50px;
+    line-height: 60px;
 
     &::after {
       width: 1050px;
@@ -160,13 +173,5 @@
 
       background-image: url("../img/iphone-hand-desktop@1x.png");
     }
-  }
-
-  .page-header__slogan {
-    width: auto;
-    margin-top: 108px;
-
-    font-size: 50px;
-    line-height: 60px;
   }
 }
