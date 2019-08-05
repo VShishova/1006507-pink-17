@@ -15,8 +15,8 @@
           <a class="page-header__logo logo" href="index.html">
             <img class="logo__image" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Фотоприложение PINK">
           </a>
-          <nav class="main-nav">
-            <!-- <button class="main-nav__toggle" type="button">Открыть меню</button> -->
+          <nav class="main-nav main-nav--opened main-nav--nojs">
+            <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
             <ul class="main-nav__list">
               <li class="main-nav__item">
                 <a href="index.html">Главная</a>
@@ -44,18 +44,18 @@
     </main>
 
     <footer class="page-footer container">
-      <a class="page-footer__logo logo" href="index.html">
+      <a class="page-footer__logo logo logo--footer" href="index.html">
         <img class="logo__image logo__image--footer" src="img/logo-pink-blue-mobile.svg" width="147" height="40" alt="Фотоприложение PINK">
       </a>
       <ul class="page-footer__social social">
-        <li class="social__item button-round">
-          <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
+        <li class="social__item">
+          <a class="social__link social__link--twitter" href="#"><span class="visually-hidden">Мы в Твиттере</span></a>
         </li>
-        <li class="social__item button-round">
-          <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
+        <li class="social__item">
+          <a class="social__link social__link--facebook" href="#"><span class="visually-hidden">Мы в Фейсбуке</span></a>
         </li>
-        <li class="social__item button-round">
-          <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">Мы в Инстаграме</a>
+        <li class="social__item">
+          <a class="social__link social__link--youtube" href="#"><span class="visually-hidden">Мы в youtube</span></a>
         </li>
       </ul>
       <div class="page-footer__copyright copyright">
@@ -67,5 +67,28 @@
         </a>
       </div>
     </footer>
+
+    <script>
+      var navMain = document.querySelector('.main-nav');
+      var navToggle = document.querySelector('.main-nav__toggle');
+      var pageHeader = document.querySelector('.page-header');
+
+      navMain.classList.remove('main-nav--nojs');
+      navMain.classList.remove('main-nav--opened');
+      navMain.classList.add('main-nav--closed');
+      pageHeader.classList.add('page-header--no-menu');
+
+      navToggle.addEventListener('click', function() {
+        if (navMain.classList.contains('main-nav--closed')) {
+          navMain.classList.remove('main-nav--closed');
+          navMain.classList.add('main-nav--opened');
+          pageHeader.classList.remove('page-header--no-menu');
+        } else {
+          navMain.classList.add('main-nav--closed');
+          navMain.classList.remove('main-nav--opened');
+          pageHeader.classList.add('page-header--no-menu');
+        }
+      });
+    </script>
   </body>
 </html>
