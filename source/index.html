@@ -13,9 +13,13 @@
       <div class="page-header__menu-wrapper">
         <div class="page-header__container container">
           <a class="page-header__logo logo">
-            <img class="logo__image" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Фотоприложение PINK">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/logo-pink-white-desktop.svg">
+              <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg">
+              <img class="logo__image" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Фотоприложение PINK">
+            </picture>
           </a>
-          <nav class="main-nav main-nav--opened main-nav--nojs">
+          <nav class="main-nav main-nav--opened">
             <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
             <ul class="main-nav__list">
               <li class="main-nav__item main-nav__item--active">
@@ -102,7 +106,6 @@
       var navToggle = document.querySelector('.main-nav__toggle');
       var pageHeader = document.querySelector('.page-header');
 
-      navMain.classList.remove('main-nav--nojs');
       navMain.classList.remove('main-nav--opened');
       navMain.classList.add('main-nav--closed');
       pageHeader.classList.add('page-header--no-menu');

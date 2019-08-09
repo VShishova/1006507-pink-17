@@ -107,5 +107,20 @@
 
   .main-nav__item {
     margin-left: 80px;
+
+    &--active {
+      position: relative;
+    }
+
+    &--active::after {
+      content: "";
+      position: absolute;
+      height: 2px;
+      right: 0;
+      left: 1px;
+      bottom: 33px;
+
+      background: white;
+    }
   }
 }
