@@ -5,7 +5,7 @@
 
 .copyright__text {
   margin: auto 0;
-  padding-right: 15px;
+  padding-right: 12px;
 
   line-height: 18px;
 }
@@ -13,4 +13,32 @@
 .copyright__link {
   width: 27px;
   height: 34px;
+
+  &:focus,
+  &:hover path {
+    fill: @text-darknavy;
+  }
+
+  &:active path {
+    fill: @text-darknavy;
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .copyright__text {
+    padding-top: 7px;
+  }
+
+  .copyright__link {
+    padding-top: 15px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .copyright__text {
+    padding-top: 0;
+    padding-right: 11px;
+    font-size: 18px;
+  }
 }

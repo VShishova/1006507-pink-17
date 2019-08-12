@@ -1,23 +1,29 @@
 .logo {
-  width: 75px;
-  height: 22px;
-
   &--footer {
     width: 147px;
     height: 40px;
   }
+
+  // &:hover,
+  // &:active .logo__image svg path{
+  //   fill: @style-red;
+  // }
 }
 
 .logo__image {
-  background-color: @bg-darkblue;
+  width: 75px;
+  height: 22px;
 }
 
 .logo--footer .logo__image {
+  width: 147px;
+  height: 40px;
+
   background-color: white;
 }
 
 @media (min-width: @tablet-width) {
-  .logo {
+  .logo__image {
     width: 147px;
     height: 40px;
   }

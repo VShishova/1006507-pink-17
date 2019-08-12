@@ -15,12 +15,31 @@
 }
 
 .photos__item {
+  position: relative;
   margin-bottom: 20px;
 
   &--main img {
     position: relative;
     left: -20px;
     max-width: @mobile-width;
+  }
+
+  &--main::before {
+    content: "Панорама дня";
+    position: absolute;
+    z-index: 1;
+    right: -1px;
+    width: 140px;
+    height: 31px;
+
+    padding-top: 5px;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    font-size: 13px;
+    color: white;
+    background-color: #d22856;
   }
 }
 
@@ -29,7 +48,7 @@
 }
 
 .photos__info-wrapper {
-  padding: 19px 17px;
+  padding: 18px 18px;
   padding-bottom: 22px;
 
   background-color: @bg-lightgray;
@@ -73,38 +92,118 @@
 }
 
 @media (min-width: @tablet-width) {
+  .photos__intro {
+    margin-top: 92px;
+    margin-bottom: 75px;
+    padding: 0 90px;
+
+    font-size: 18px;
+  }
+
   .photos__list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
 
-  .photos__intro {
-    margin-bottom: 80px;
-    padding: 0 90px;
-
-    font-size: 18px;
+  .photos__item {
+    margin-bottom: 20px;
   }
 
   .photos__item:not(.photos__item--main) {
     display: flex;
     flex-direction: column;
     width: 300px;
+
+    & img {
+      width: 300px;
+      height: 300px;
+    }
+  }
+
+  .photos__item--main {
+    width: @tablet-width - 40px;
+    margin-bottom: 50px;
+
+    &::before {
+      right: 0;
+      top: 58px;
+    }
+  }
+
+  .photos__item--main img {
+    width: @tablet-width;
+    max-width: @tablet-width;
+    height: 509px;
+  }
+
+  .photos__item--main .photos__likes {
+    position: absolute;
+    right: 60px;
+
+    &::before {
+      left: 107px;
+      top: 5px;
+    }
   }
 
   .photos__info-wrapper {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
+
+    padding: 24px 28px;
+    padding-bottom: 15px;
   }
 
   .photos__comment {
     flex-grow: 1;
+    margin-bottom: 10px;
+    min-height: 48px;
+  }
+
+  .photos__likes {
+    margin-bottom: 10px;
+    margin-left: 0;
+
+    &::before {
+      left: 93%;
+      top: 7px;
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
+  .photos__intro {
+    width: 640px;
+    margin: auto;
+    margin-top: 93px;
+    margin-bottom: 86px;
+  }
+
+  .photos__item {
+    margin-bottom: 53px;
+  }
+
   .photos__item--main {
     width: 940px;
+
+    & img {
+      left: -130px;
+      width: @desktop-width;
+      max-width: @desktop-width;
+    }
+  }
+
+  .photos__item--main .photos__likes {
+    right: 62px;
+  }
+
+  .photos__item:not(.photos__item--main) img {
+    height: 400px;
+  }
+
+  .photos__info-wrapper {
+    padding-top: 22px;
   }
 }
