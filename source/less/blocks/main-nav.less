@@ -7,10 +7,11 @@
 
 .main-nav__toggle {
   position: absolute;
+  display: block;
   top: -50px;
   right: 20px;
 
-  display: block;
+  padding: 0;
   width: 50px;
   height: 24px;
 
@@ -18,10 +19,26 @@
 
   cursor: pointer;
   border: none;
+  outline: none;
 
   &:hover,
-  &:active {
-    // background-color: #624530;
+  &:focus .main-nav__menu-icon-cross path {
+    fill: @style-red;
+  }
+
+  &:hover,
+  &:focus .main-nav__menu-icon-burger path {
+    fill: @style-red;
+  }
+
+  &:active .main-nav__menu-icon-cross path {
+    fill: @style-red;
+    opacity: 0.3;
+  }
+
+  &:active .main-nav__menu-icon-burger path {
+    fill: @style-red;
+    opacity: 0.3;
   }
 }
 
@@ -29,14 +46,28 @@
   width: 50px;
   height: 24px;
 
-  background-image: url("../img/icon-menu-burger.svg");
+  background-color: transparent;
+}
+
+.main-nav--closed .main-nav__menu-icon-burger {
+  display: block;
+}
+
+.main-nav--closed .main-nav__menu-icon-cross {
+  display: none;
 }
 
 .main-nav--opened .main-nav__toggle {
   width: 24px;
   height: 23px;
+}
 
-  background-image: url("../img/icon-menu-cross.svg");
+.main-nav--opened .main-nav__menu-icon-burger {
+  display: none;
+}
+
+.main-nav--opened .main-nav__menu-icon-cross {
+  display: block;
 }
 
 .main-nav__list {
@@ -59,6 +90,19 @@
 .main-nav__item a {
   color: inherit;
   text-decoration: none;
+  outline: none;
+}
+
+.main-nav__item a[href] {
+  &:hover,
+  &:focus {
+    color: @style-red;
+  }
+
+  &:active {
+    color: @style-red;
+    opacity: 0.3;
+  }
 }
 
 @media (max-width: @not-desktop-width) {
@@ -121,6 +165,12 @@
       bottom: 33px;
 
       background: white;
+    }
+  }
+
+  .main-nav__item a[href] {
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
     }
   }
 }

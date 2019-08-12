@@ -13,6 +13,16 @@
 .copyright__link {
   width: 27px;
   height: 34px;
+
+  &:focus,
+  &:hover path {
+    fill: @text-darknavy;
+  }
+
+  &:active path {
+    fill: @text-darknavy;
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: @tablet-width) {
