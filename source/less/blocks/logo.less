@@ -1,18 +1,20 @@
 .logo {
+  outline: none;
+
   &--footer {
     width: 147px;
     height: 40px;
   }
 
-  // &:hover,
-  // &:active .logo__image svg path{
-  //   fill: @style-red;
-  // }
-}
+  &:focus,
+  &:hover .logo__image g {
+    fill: @style-red;
+  }
 
-.logo__image {
-  width: 75px;
-  height: 22px;
+  &:active .logo__image g {
+    fill: #ffffff;
+    opacity: 0.3;
+  }
 }
 
 .logo--footer .logo__image {
