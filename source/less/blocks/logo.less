@@ -7,13 +7,23 @@
   }
 
   &:focus,
-  &:hover .logo__image g {
+  &:hover .logo__image {
     fill: @style-red;
   }
 
-  &:active .logo__image g {
+  &:active .logo__image {
     fill: #ffffff;
     opacity: 0.3;
+  }
+}
+
+.logo__image {
+  &--tablet {
+    display: none;
+  }
+
+  &--desktop {
+    display: none;
   }
 }
 
@@ -26,7 +36,24 @@
 
 @media (min-width: @tablet-width) {
   .logo__image {
-    width: 147px;
-    height: 40px;
+    &--mobile {
+      display: none;
+    }
+
+    &--tablet {
+      display: inline-block;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .logo__image {
+    &--tablet {
+      display: none;
+    }
+
+    &--desktop {
+      display: inline-block;
+    }
   }
 }
