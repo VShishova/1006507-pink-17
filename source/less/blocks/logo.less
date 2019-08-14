@@ -7,24 +7,19 @@
   }
 
   &:focus,
-  &:hover .logo__image {
+  &:hover .logo__image g {
     fill: @style-red;
   }
 
-  &:active .logo__image {
+  &:active .logo__image g {
     fill: #ffffff;
     opacity: 0.3;
   }
 }
 
 .logo__image {
-  &--tablet {
-    display: none;
-  }
-
-  &--desktop {
-    display: none;
-  }
+  width: 75px;
+  height: 22px;
 }
 
 .logo--footer .logo__image {
@@ -33,28 +28,7 @@
 
 @media (min-width: @tablet-width) {
   .logo__image {
-    &--mobile {
-      display: none;
-    }
-
-    &--tablet {
-      display: inline-block;
-    }
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .logo__image {
-    &--mobile-footer {
-      display: none;
-    }
-
-    &--tablet {
-      display: none;
-    }
-
-    &--desktop {
-      display: inline-block;
-    }
+    width: 147px;
+    height: 40px;
   }
 }
