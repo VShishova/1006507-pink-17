@@ -1,5 +1,5 @@
 .reviews {
-  padding-top: 40px;
+  margin-top: 40px;
 }
 
 .reviews__list {
@@ -38,18 +38,32 @@
 }
 
 @media (min-width: @tablet-width) {
+  .reviews {
+    margin-top: 29px;
+  }
+
   .reviews__item {
+    margin-bottom: 8px;
     display: flex;
     flex-direction: column;
   }
 
   .reviews__author {
+    margin-top: 34px;
     order: 2;
   }
 
   .reviews__author-details {
     display: block;
+    font-style: normal;
+    line-height: 36px;
   }
 
-  .re
+  .reviews__text {
+    font-size: 18px;
+  }
+
+  .reviews__author-name {
+    font-size: 20px;
+  }
 }
