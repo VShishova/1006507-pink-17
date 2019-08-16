@@ -147,9 +147,6 @@
         </div>
       </section>
       <section class="reviews">
-          <input class="price__switcher" type="radio" name="price" id="price-radio-1">
-          <input class="price__switcher" type="radio" name="price" id="price-radio-2" checked="">
-          <input class="price__switcher" type="radio" name="price" id="price-radio-3">
         <div class="reviews__list container">
           <blockquote class="reviews__item">
             <cite class="reviews__author">
@@ -158,19 +155,76 @@
             </cite>
             <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
           </blockquote>
+          <button class="button button--active" type="button"><span class="visually-hidden">1</span></button>
+          <button class="button" type="button"><span class="visually-hidden">2</span></button>
+          <button class="button" type="button"><span class="visually-hidden">3</span></button>
         </div>
-        <p class="reviews__toggles">
-        </p>
       </section>
       <section class="price">
         <div class="price__wrapper container">
-          <input class="price__switcher" type="radio" name="price" id="price-radio-1">
+          <!-- <input class="price__switcher" type="radio" name="price" id="price-radio-1">
           <input class="price__switcher" type="radio" name="price" id="price-radio-2" checked="">
-          <input class="price__switcher" type="radio" name="price" id="price-radio-3">
+          <input class="price__switcher" type="radio" name="price" id="price-radio-3"> -->
           <table class="price__list">
             <thead class="price__list-head">
+              <tr>
+                <td>Опции</td>
+                <td>
+                  <b>База</b>
+                  <span>1,99 USD</span>
+                </td>
+                <td>
+                  <b>Стандарт</b>
+                  <span>3,99 USD</span>
+                </td>
+                <td>
+                  <b>Анлим</b>
+                  <span>9,99 USD</span>
+                </td>
+              </tr>
             </thead>
+            <tbody class="price__list-body">
+              <tr>
+                <td>Розовый фильтр</td>
+                <td>
+                  <svg width="31" height="21" fill="#3dc644"><use xlink:href="#icon-yes"></use></svg>
+                </td>
+                <td>
+                  <svg width="31" height="21" fill="#3dc644"><use xlink:href="#icon-yes"></use></svg>
+                </td>
+                <td>
+                  <svg width="31" height="21" fill="#3dc644"><use xlink:href="#icon-yes"></use></svg>
+                </td>
+              </tr>
+              <tr>
+                <td>Смайлики</td>
+                <td>
+                  <svg width="27" height="26" fill="#f25b26"><use xlink:href="#icon-no"></use></svg>
+                </td>
+                <td>
+                  <svg width="31" height="21" fill="#3dc644"><use xlink:href="#icon-yes"></use></svg>
+                </td>
+                <td>
+                  <svg width="31" height="21" fill="#3dc644"><use xlink:href="#icon-yes"></use></svg>
+                </td>
+              </tr>
+              <tr>
+                <td>Комментарии</td>
+                <td>
+                  <svg width="27" height="26" fill="#f25b26"><use xlink:href="#icon-no"></use></svg>
+                </td>
+                <td>
+                  <svg width="27" height="26" fill="#f25b26"><use xlink:href="#icon-no"></use></svg>
+                </td>
+                <td>
+                  <svg width="31" height="21" fill="#3dc644"><use xlink:href="#icon-yes"></use></svg>
+                </td>
+              </tr>
+            </tbody>
           </table>
+          <button class="button" type="button"><span class="visually-hidden">1</span></button>
+          <button class="button button--active" type="button"><span class="visually-hidden">2</span></button>
+          <button class="button" type="button"><span class="visually-hidden">3</span></button>
         </div>
       </section>
     </main>
