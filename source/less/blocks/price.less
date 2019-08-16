@@ -11,12 +11,7 @@
 .price__list {
   width: 1120px;
   transform: translateX(-560px);
-}
-
-.price__list-head td {
-  width: 25%;
-  padding: 0;
-  box-sizing: border-box;
+  border-collapse: collapse;
 }
 
 .price__list-head {
@@ -24,6 +19,48 @@
   background-color: @bg-darkblue;
 }
 
+.price__list th {
+  width: 25%;
+  padding: 0;
+  box-sizing: border-box;
+
+  border: 2px solid white;
+}
+
+.price__list td {
+  padding-left: 22px;
+
+  background-color: white;
+  border: 2px solid @bg-lightgray;
+}
+
+.price__list-head tr {
+  height: 94px;
+}
+
+.price__list-body tr {
+  height: 59px;
+}
+
 .price__hidden-cell {
   background-color: @bg-lightgray;
+}
+
+.price__name {
+  display: block;
+
+  font-size: 18px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.price__cost {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 300;
+}
+
+.price__option {
+  line-height: 30px;
+  text-transform: uppercase;
 }
