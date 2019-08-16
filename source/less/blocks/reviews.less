@@ -67,3 +67,41 @@
     font-size: 20px;
   }
 }
+
+@media (min-width: @desktop-width) {
+  .reviews {
+    margin-top: 186px;
+  }
+
+  .reviews__list {
+    position: relative;
+    width: 690px;
+    margin: 0 auto;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 79px;
+      height: 63px;
+
+      top: -112px;
+      transform: translateX(-50%);
+
+      background-image: url("../img/icon-quotes.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  .reviews__button-active {
+    display: none;
+  }
+
+  .reviews__author-name {
+    font-size: 24px;
+  }
+
+  .reviews__author-details {
+    font-size: 18px;
+  }
+}
