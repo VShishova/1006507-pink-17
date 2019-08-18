@@ -32,6 +32,7 @@
 @import "blocks/page-footer.less";
 @import "blocks/copyright.less";
 @import "blocks/reviews.less";
+@import "blocks/price.less";
 
 .visually-hidden:not(:focus):not(:active) {
   position: absolute;
@@ -67,6 +68,24 @@ img {
 .container {
   margin: 0 auto;
   width: @mobile-width - 40px;
+}
+
+.button {
+  box-sizing: content-box;
+  padding: 0;
+  width: 6px;
+  height: 6px;
+
+  border: 0;
+  border-radius: 50%;
+  background-color: @text-darknavy;
+  opacity: 0.3;
+
+  &--active {
+    border: 3px solid @text-darknavy;
+    background-color: white;
+    opacity: 1;
+  }
 }
 
 @media (min-width: @tablet-width) {
