@@ -1,5 +1,5 @@
 .price {
-  padding-top: 75px;
+  padding-top: 87px;
 
   background-color: @bg-lightgray;
   background-image: url("../img/bg-triangle-white.svg");
@@ -10,8 +10,9 @@
 
 .price__list {
   width: 1120px;
+  margin-bottom: 32px;
+
   transform: translateX(-560px);
-  border-collapse: collapse;
 }
 
 .price__list-head {
@@ -23,27 +24,43 @@
   width: 25%;
   padding: 0;
   box-sizing: border-box;
+  empty-cells: hide;
 
-  border: 2px solid white;
+  border: 0 solid white;
 }
 
 .price__list td {
   padding-left: 22px;
+  line-height: 30px;
 
   background-color: white;
-  border: 2px solid @bg-lightgray;
+  border: 0 solid @bg-lightgray;
 }
 
 .price__list-head tr {
-  height: 94px;
+  height: 97px;
 }
 
 .price__list-body tr {
-  height: 59px;
+  height: 58px;
 }
 
-.price__hidden-cell {
-  background-color: @bg-lightgray;
+.price__item-hit {
+  position: relative;
+
+  background-image: url("../img/bg-hit.svg");
+  background-repeat: no-repeat;
+  background-position: left top;
+
+  &::before {
+    content: "Хит";
+    position: absolute;
+    left: 8px;
+    top: 15px;
+    text-transform: uppercase;
+
+    transform: rotate(-45deg);
+  }
 }
 
 .price__name {
@@ -61,6 +78,121 @@
 }
 
 .price__option {
+  position: relative;
   line-height: 30px;
   text-transform: uppercase;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 31px;
+    height: 21px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--yes::after {
+    width: 31px;
+    height: 21px;
+
+    background-image: url("../img/icon-yes.svg");
+  }
+}
+
+.price__button-wrapper {
+  padding-bottom: 45px;
+  text-align: center;
+}
+
+.price__button-wrapper .button {
+  margin: 0 7px;
+}
+
+@media (min-width: @tablet-width) {
+  .price__list {
+    width: 622px;
+    padding-bottom: 65px;
+    transform: translateX(0);
+  }
+
+  .price__list-head tr {
+    height: 78px;
+  }
+
+  .price__list-body tr {
+    height: 45px;
+  }
+
+  .price__list td {
+    padding-left: 15px;
+  }
+
+  .price__item-hit {
+    background-image: url("../img/bg-hit-tablet.svg");
+
+    &::before {
+      left: 4px;
+      top: 6px;
+    }
+  }
+
+  .price__name {
+    font-size: 16px;
+  }
+
+  .price__option {
+    // display: none;
+  }
+
+  .price__cost {
+    font-size: 18px;
+  }
+
+  .price__button-wrapper {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .price {
+    padding-top: 153px;
+  }
+
+  .price__list {
+    width: 940px;
+    padding-bottom: 97px;
+  }
+
+  .price__list td {
+    padding-left: 19px;
+
+    font-size: 18px;
+  }
+
+  .price__list-head tr {
+    height: 97px;
+  }
+
+  .price__list-body tr {
+    height: 58px;
+  }
+
+  .price__item-hit {
+    background-image: url("../img/bg-hit.svg");
+
+    &::before {
+      left: 7px;
+      top: 15px;
+    }
+  }
+
+  .price__name {
+    font-size: 18px;
+  }
+
+  .price__cost {
+    font-size: 24px;
+  }
 }
