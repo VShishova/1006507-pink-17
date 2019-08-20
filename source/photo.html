@@ -217,6 +217,36 @@
           </li>
         </ul>
       </section>
+      <section class="photo-editor">
+        <div class="container">
+          <p class="photo-editor__intro">Затмите их всех!</p>
+          <p class="photo-editor__intro">Выкладывайте все, что накопилось в телефоне!</p>
+        </div>
+        <div class="photo-editor__wrapper">
+          <div class="container">
+            <picture>
+              <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-road-desktop@1x.webp 1x, img/photo-road-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-road-tablet@1x.webp 1x, img/photo-road-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/photo-road-mobile@1x.webp 1x, img/photo-road-mobile@2x.webp 2x">
+              <source media="(min-width: 1200px)" srcset="img/photo-road-desktop@1x.jpg 1x, img/photo-road-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/photo-road-tablet@1x.jpg 1x, img/photo-road-tablet@2x.jpg 2x">
+              <img class="photo-editor__image" src="img/photo-road-mobile@1x.jpg" srcset="img/photo-road-mobile@2x.jpg 2x" width="280" height="374" alt="Фотография для редактирования">
+            </picture>
+            <form class="photo-editor__form" method="post" action="https://echo.htmlacademy.ru">
+              <div class="photo-editor__controls">
+                <label for="slider-crop">
+                  <span class="visually-hidden">Обрезать</span>
+                  <svg width="22" height="22" fill="#d22856" viewbox="0 0 48 48"><use xlink:href="#icon-editor-crop"></use></svg>
+                </label>
+                <input type="range" id="slider-crop" name="crop">
+              </div>
+              <div class="photo-editor__buttons">
+
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
 
     </main>
 

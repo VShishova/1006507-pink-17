@@ -1,5 +1,10 @@
 .page-footer {
   text-align: center;
+  min-height: 284px;
+}
+
+.page-footer--index {
+  display: none;
 }
 
 .page-footer__logo {
@@ -16,6 +21,12 @@
   .page-footer {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    min-height: 127px;
+  }
+
+  .page-footer--index {
+    display: flex;
   }
 
   .page-footer__social {
@@ -27,9 +38,21 @@
     margin: 0;
     margin-right: -15px;
   }
+
+  .logo--footer {
+    margin-top: -16px;
+  }
+
+  .page-footer__copyright {
+    margin-top: -7px;
+  }
 }
 
 @media (min-width: @desktop-width) {
+  .page-footer {
+    min-height: 197px;
+  }
+
   .page-footer__logo {
     margin-right: 14px;
   }
