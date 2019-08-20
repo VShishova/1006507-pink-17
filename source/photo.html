@@ -234,14 +234,29 @@
             </picture>
             <form class="photo-editor__form" method="post" action="https://echo.htmlacademy.ru">
               <div class="photo-editor__controls">
-                <label for="slider-crop">
-                  <span class="visually-hidden">Обрезать</span>
-                  <svg width="22" height="22" fill="#d22856" viewbox="0 0 48 48"><use xlink:href="#icon-editor-crop"></use></svg>
-                </label>
-                <input type="range" id="slider-crop" name="crop">
+                <div class="photo-editor__labels-wrapper">
+                  <label class="photo-editor__label photo-editor__label--active" for="slider-crop">
+                    <span class="visually-hidden">Обрезка</span>
+                    <svg width="44" height="44" fill="#d22856" viewbox="0 0 48 48"><use xlink:href="#icon-editor-crop"></use></svg>
+                  </label>
+                  <label class="photo-editor__label" for="slider-fill">
+                    <span class="visually-hidden">Заливка</span>
+                    <svg width="48" height="43" fill="#283645"><use xlink:href="#icon-editor-fill"></use></svg>
+                  </label>
+                  <label class="photo-editor__label" for="slider-contrast">
+                    <span class="visually-hidden">Контрастность</span>
+                    <svg width="32" height="32" fill="#283645"><use xlink:href="#icon-editor-contrast"></use></svg>
+                  </label>
+                </div>
+                <div class="photo-editor__sliders-wrapper">
+                  <input class="photo-editor__slider photo-editor__slider--active" type="range" id="slider-crop" name="crop">
+                  <input class="photo-editor__slider" type="range" id="slider-fill" name="fill">
+                  <input class="photo-editor__slider" type="range" id="slider-contrast" name="contrast">
+                </div>
               </div>
               <div class="photo-editor__buttons">
-
+                <button class="photo-editor__button photo-editor__button--active" type="submit">Запостить</button>
+                <button class="photo-editor__button" type="button">Отмена</button>
               </div>
             </form>
           </div>
