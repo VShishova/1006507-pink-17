@@ -48,17 +48,27 @@
 .price__item-hit {
   position: relative;
 
-  background-image: url("../img/bg-hit.svg");
-  background-repeat: no-repeat;
-  background-position: left top;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -2px;
+    width: 74px;
+    height: 73px;
+
+    background-image: url("../img/bg-hit.svg");
+    background-repeat: no-repeat;
+    background-position: left top;
+  }
 
   &::before {
     content: "Хит";
     position: absolute;
+    z-index: 1;
     left: 8px;
     top: 15px;
-    text-transform: uppercase;
 
+    text-transform: uppercase;
     transform: rotate(-45deg);
   }
 }
@@ -143,7 +153,9 @@
   }
 
   .price__item-hit {
-    background-image: url("../img/bg-hit-tablet.svg");
+    &::after {
+      background-image: url("../img/bg-hit-tablet.svg");
+    }
 
     &::before {
       left: 4px;
@@ -198,7 +210,9 @@
   }
 
   .price__item-hit {
-    background-image: url("../img/bg-hit.svg");
+    &::after {
+      background-image: url("../img/bg-hit.svg");
+    }
 
     &::before {
       left: 7px;

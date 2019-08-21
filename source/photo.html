@@ -223,7 +223,7 @@
           <p class="photo-editor__intro">Выкладывайте все, что накопилось в телефоне!</p>
         </div>
         <div class="photo-editor__wrapper">
-          <div class="container">
+          <div class="photo-editor__form-wrapper container">
             <picture>
               <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-road-desktop@1x.webp 1x, img/photo-road-desktop@2x.webp 2x">
               <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-road-tablet@1x.webp 1x, img/photo-road-tablet@2x.webp 2x">
@@ -233,27 +233,29 @@
               <img class="photo-editor__image" src="img/photo-road-mobile@1x.jpg" srcset="img/photo-road-mobile@2x.jpg 2x" width="280" height="374" alt="Фотография для редактирования">
             </picture>
             <form class="photo-editor__form" method="post" action="https://echo.htmlacademy.ru">
-              <div class="photo-editor__controls">
-                <div class="photo-editor__labels-wrapper">
-                  <label class="photo-editor__label photo-editor__label--active" for="slider-crop">
+              <ul class="photo-editor__controls">
+                <li class="photo-editor__control photo-editor__control--active">
+                  <label class="photo-editor__label" for="slider-crop">
                     <span class="visually-hidden">Обрезка</span>
-                    <svg width="44" height="44" fill="#d22856" viewbox="0 0 48 48"><use xlink:href="#icon-editor-crop"></use></svg>
+                    <svg class="photo-editor__image-crop" width="44" height="44" fill="#d22856" viewbox="0 0 48 48"><use xlink:href="#icon-editor-crop"></use></svg>
                   </label>
+                  <input class="photo-editor__slider" type="range" id="slider-crop" name="crop">
+                </li>
+                <li class="photo-editor__control">
                   <label class="photo-editor__label" for="slider-fill">
                     <span class="visually-hidden">Заливка</span>
-                    <svg width="48" height="43" fill="#283645"><use xlink:href="#icon-editor-fill"></use></svg>
+                    <svg class="photo-editor__image-fill" width="48" height="43" fill="#283645" viewbox="0 0 48 43"><use xlink:href="#icon-editor-fill"></use></svg>
                   </label>
+                  <input class="photo-editor__slider" type="range" id="slider-fill" name="fill">
+                </li>
+                <li class="photo-editor__control">
                   <label class="photo-editor__label" for="slider-contrast">
                     <span class="visually-hidden">Контрастность</span>
-                    <svg width="32" height="32" fill="#283645"><use xlink:href="#icon-editor-contrast"></use></svg>
+                    <svg class="photo-editor__image-contrast" width="32" height="32" fill="#283645"><use xlink:href="#icon-editor-contrast"></use></svg>
                   </label>
-                </div>
-                <div class="photo-editor__sliders-wrapper">
-                  <input class="photo-editor__slider photo-editor__slider--active" type="range" id="slider-crop" name="crop">
-                  <input class="photo-editor__slider" type="range" id="slider-fill" name="fill">
                   <input class="photo-editor__slider" type="range" id="slider-contrast" name="contrast">
-                </div>
-              </div>
+                </li>
+              </ul>
               <div class="photo-editor__buttons">
                 <button class="photo-editor__button photo-editor__button--active" type="submit">Запостить</button>
                 <button class="photo-editor__button" type="button">Отмена</button>
