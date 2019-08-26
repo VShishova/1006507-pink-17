@@ -75,7 +75,7 @@
   &::after {
     display: block;
     left: -56px;
-    top: 118px;
+    bottom: 70px;
   }
 }
 
@@ -190,8 +190,18 @@
 }
 
 @media (min-width: @tablet-width) {
+  .photo-editor {
+    margin-top: 42px;
+  }
+
   .photo-editor__intro {
     font-size: 18px;
+  }
+
+  .photo-editor__wrapper {
+    margin-top: 70px;
+    padding-top: 56px;
+    padding-bottom: 55px;
   }
 
   .photo-editor__form-wrapper {
@@ -201,12 +211,30 @@
   .photo-editor__image {
     width: 300px;
     height: 400px;
+    vertical-align: top;
   }
 
   .photo-editor__form {
-    width: 273px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 260px;
     margin-top: 0;
+    margin-right: 13px;
     margin-left: auto;
+  }
+
+  .photo-editor__controls {
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    padding-right: 5px;
+    top: -13px;
+  }
+
+  .photo-editor__label {
+    height: 22px;
   }
 
   .photo-editor__image-crop {
@@ -224,8 +252,24 @@
     height: 16px;
   }
 
+  .photo-editor__control {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    height: 71px;
+
+    &::after {
+      display: block;
+      left: 0;
+      bottom: 0;
+      width: 270px;
+    }
+  }
+
   .photo-editor__slider {
     display: inline-block;
+    margin-left: auto;
     width: 202px;
   }
 
@@ -233,13 +277,74 @@
     position: static;
   }
 
+  .photo-editor__button {
+    width: 260px;
+    margin-top: 24px;
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .photo-editor {
+    margin-top: 7px;
+  }
+
+  .photo-editor__wrapper {
+    margin-top: 10px;
+    background-color: white;
+  }
+
+  .photo-editor__form-wrapper {
+    box-sizing: border-box;
+    padding: 57px 60px 57px 80px;
+    background-color: @bg-lightgray;
+  }
+
+  .photo-editor__form {
+    margin-right: 0;
+    width: 410px;
+  }
+
   .photo-editor__controls {
-    flex-direction: column;
-    margin: 0;
-    padding: 0;
+    padding-right: 30px;
+  }
+
+  .photo-editor__control {
+    &::after {
+      width: 410px;
+    }
+  }
+
+  .photo-editor__label {
+    height: 44px;
+  }
+
+  .photo-editor__image-crop {
+    width: 44px;
+    height: 44px;
+  }
+
+  .photo-editor__image-fill {
+    width: 48px;
+    height: 43px;
+  }
+
+  .photo-editor__image-contrast {
+    width: 32px;
+    height: 32px;
+  }
+
+  .photo-editor__slider {
+    width: 288px;
+  }
+
+  .photo-editor__buttons {
+    display: flex;
+    justify-content: space-between;
   }
 
   .photo-editor__button {
-    width: 260px;
+    width: 183px;
+    height: 55px;
   }
 }
