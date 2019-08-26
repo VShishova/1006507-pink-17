@@ -95,7 +95,56 @@
     <main class="page-inner">
       <h1 class="visually-hidden">Конкурс пользователей</h1>
       <form class="form" method="post" action="https://echo.htmlacademy.ru">
+        <p class="form__review">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
+        <p class="form__intro">Пожалуйста, заполните форму ниже:</p>
+        <div class="form__name-wrapper">
+          <p>
+            <label>Фамилия:<input type="text" name="surname" placeholder="Укажите фамилию *"></label>
+          </p>
+          <p>
+            <label>Имя:<input type="text" name="name" placeholder="Введите ваше имя *"></label>
+          </p>
+          <p>
+            <label>Отчество:<input type="text" name="mid-name" placeholder="Ну и отчество тоже"></label>
+          </p>
+        </div>
+        <fieldset class="form__results">
+          <legend>Ваши безбашенные достижения в путешествии</legend>
+          <ul class="form__results-list">
+            <li class="form__results-item">
+              <input class="visually-hidden form__input-checkbox" type="checkbox" name="selfi" id="filter-selfi" checked>
+              <label for="filter-selfi">Сделал селфи с акулой</label>
+            </li>
+            <li class="form__results-item">
+              <input class="visually-hidden form__input-checkbox" type="checkbox" name="burned" id="filter-burned" checked>
+              <label for="filter-burned">Обгорел на пляже</label>
+            </li>
+            <li class="form__results-item">
+              <input class="visually-hidden form__input-checkbox" type="checkbox" name="chuck" id="filter-chuck" checked>
+              <label for="filter-chuck">Видел Чака Норриса</label>
+            </li>
+            <li class="form__results-item">
+              <input class="visually-hidden form__input-checkbox" type="checkbox" name="souvenirs" id="filter-souvenirs" checked>
+              <label for="filter-souvenirs">Накупил сувениров</label>
+            </li>
+            <li class="form__results-item">
+              <input class="visually-hidden form__input-checkbox" type="checkbox" name="tower" id="filter-tower" checked>
+              <label for="filter-tower">Удержал башню</label>
+            </li>
+            <li class="form__results-item">
+              <input class="visually-hidden form__input-checkbox" type="checkbox" name="hotel" id="filter-hotel" checked>
+              <label for="filter-hotel">Разгромил отель</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="form__contacts">
+          <legend>Контактная информация</legend>
+          <p>
+            <label for="user-phone">Номер телефона</label>
+            <input name="phone" id="user-phone" type="text" placeholder="Номер, пожалуйста">
+          </p>
 
+        </fieldset>
       </form>
     </main>
 
