@@ -95,56 +95,93 @@
     <main class="page-inner">
       <h1 class="visually-hidden">Конкурс пользователей</h1>
       <form class="form" method="post" action="https://echo.htmlacademy.ru">
-        <p class="form__review">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
-        <p class="form__intro">Пожалуйста, заполните форму ниже:</p>
+        <div class="form__intro-wrapper">
+          <p class="form__intro">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
+          <p class="form__intro form__intro--hidden">Пожалуйста, заполните форму ниже:</p>
+        </div>
         <div class="form__name-wrapper">
           <p>
-            <label>Фамилия:<input type="text" name="surname" placeholder="Укажите фамилию *"></label>
+            <label for="input-surname">Фамилия:</label>
+            <input type="text" name="surname" id="input-surname" placeholder="Укажите фамилию *" required>
           </p>
           <p>
-            <label>Имя:<input type="text" name="name" placeholder="Введите ваше имя *"></label>
+            <label for="input-name">Имя:</label>
+            <input type="text" name="name" id="input-name" placeholder="Введите ваше имя *" required>
           </p>
           <p>
-            <label>Отчество:<input type="text" name="mid-name" placeholder="Ну и отчество тоже"></label>
+            <label for="input-mid-name">Отчество:</label>
+            <input type="text" name="mid-name" id="input-mid-name" placeholder="Ну и отчество тоже">
           </p>
         </div>
         <fieldset class="form__results">
-          <legend>Ваши безбашенные достижения в путешествии</legend>
-          <ul class="form__results-list">
-            <li class="form__results-item">
-              <input class="visually-hidden form__input-checkbox" type="checkbox" name="selfi" id="filter-selfi" checked>
-              <label for="filter-selfi">Сделал селфи с акулой</label>
-            </li>
-            <li class="form__results-item">
-              <input class="visually-hidden form__input-checkbox" type="checkbox" name="burned" id="filter-burned" checked>
-              <label for="filter-burned">Обгорел на пляже</label>
-            </li>
-            <li class="form__results-item">
-              <input class="visually-hidden form__input-checkbox" type="checkbox" name="chuck" id="filter-chuck" checked>
-              <label for="filter-chuck">Видел Чака Норриса</label>
-            </li>
-            <li class="form__results-item">
-              <input class="visually-hidden form__input-checkbox" type="checkbox" name="souvenirs" id="filter-souvenirs" checked>
-              <label for="filter-souvenirs">Накупил сувениров</label>
-            </li>
-            <li class="form__results-item">
-              <input class="visually-hidden form__input-checkbox" type="checkbox" name="tower" id="filter-tower" checked>
-              <label for="filter-tower">Удержал башню</label>
-            </li>
-            <li class="form__results-item">
-              <input class="visually-hidden form__input-checkbox" type="checkbox" name="hotel" id="filter-hotel" checked>
-              <label for="filter-hotel">Разгромил отель</label>
-            </li>
-          </ul>
+          <div class="container">
+            <legend>Ваши безбашенные достижения в путешествии</legend>
+            <ul class="form__results-list">
+              <li class="form__results-item filter-option">
+                <input class="visually-hidden form__input-checkbox" type="checkbox" name="selfi" id="filter-selfi" checked>
+                <label for="filter-selfi">Сделал селфи с акулой</label>
+              </li>
+              <li class="form__results-item filter-option">
+                <input class="visually-hidden form__input-checkbox" type="checkbox" name="burned" id="filter-burned" checked>
+                <label for="filter-burned">Обгорел на пляже</label>
+              </li>
+              <li class="form__results-item filter-option">
+                <input class="visually-hidden form__input-checkbox" type="checkbox" name="chuck" id="filter-chuck">
+                <label for="filter-chuck">Видел Чака Норриса</label>
+              </li>
+              <li class="form__results-item filter-option">
+                <input class="visually-hidden form__input-checkbox" type="checkbox" name="souvenirs" id="filter-souvenirs">
+                <label for="filter-souvenirs">Накупил сувениров</label>
+              </li>
+              <li class="form__results-item filter-option">
+                <input class="visually-hidden form__input-checkbox" type="checkbox" name="tower" id="filter-tower" checked>
+                <label for="filter-tower">Удержал башню</label>
+              </li>
+              <li class="form__results-item filter-option">
+                <input class="visually-hidden form__input-checkbox" type="checkbox" name="hotel" id="filter-hotel">
+                <label for="filter-hotel">Разгромил отель</label>
+              </li>
+            </ul>
+          </div>
         </fieldset>
-        <fieldset class="form__contacts">
+        <fieldset class="form__contacts container">
           <legend>Контактная информация</legend>
           <p>
             <label for="user-phone">Номер телефона</label>
-            <input name="phone" id="user-phone" type="text" placeholder="Номер, пожалуйста">
+            <input name="phone" id="user-phone" type="tel" placeholder="Номер, пожалуйста" pattern="+7([0-9]{3})">
           </p>
-
+          <p>
+            <label for="user-mail">Адрес почты</label>
+            <input name="mail" id="user-mail" type="email" placeholder="Введите почту *" required>
+          </p>
         </fieldset>
+        <div class="form__applications-wrapper">
+          <fieldset class="form__applications">
+            <legend>С каким приложением путешествовали?</legend>
+            <ul class="form__applications-list">
+              <li class="form__applications-item filter-option">
+                <input class="visually-hidden form__input-radio" type="radio" name="application" value="ios" id="filter-ios" checked>
+                <label for="filter-ios">Pink для iOS</label>
+              </li>
+              <li class="form__applications-item filter-option">
+                <input class="visually-hidden form__input-radio" type="radio" name="application" value="android" id="filter-android">
+                <label for="filter-android">Pink на Android</label>
+              </li>
+              <li class="form__applications-item filter-option">
+                <input class="visually-hidden form__input-radio" type="radio" name="application" value="windows" id="filter-windows">
+                <label for="filter-windows">Windows Phone</label>
+              </li>
+            </ul>
+          </fieldset>
+        </div>
+        <fieldset class="form__emotions container">
+          <legend>Опишите свои эмоции</legend>
+          <textarea name="emotions">Можно прям в красках, не стесняясь в выражениях</textarea>
+        </fieldset>
+        <div class="form__button-wrapper container">
+          <button class="form__button" type="submit">Отправить форму</button>
+          <p class="form__legend"><span class="form__star">*</span> — обязательные<span class="form__legend--hidden"> для заполнения</span> поля</p>
+        </div>
       </form>
     </main>
 
@@ -212,7 +249,7 @@
       </div>
     </footer>
 
-    <script>
+    <!-- <script>
       var navMain = document.querySelector('.main-nav');
       var navToggle = document.querySelector('.main-nav__toggle');
       var pageHeader = document.querySelector('.page-header');
@@ -233,6 +270,6 @@
           pageHeader.classList.add('page-header--no-menu');
         }
       });
-    </script>
+    </script> -->
   </body>
 </html>

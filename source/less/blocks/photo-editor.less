@@ -93,25 +93,20 @@
 
 .photo-editor__slider {
   display: none;
-  appearance: none;
-  width: 240px;
-  height: 2px;
-  padding: 0;
-
-  outline: none;
-  background-color: black;
-
-  &:focus {
-    outline: none;
-  }
-
-  &:active::-webkit-slider-thumb {
-    background-color: @style-red;
-  }
+  position: relative;
 }
 
-.photo-editor__slider::-webkit-slider-thumb {
-  appearance: none;
+.photo-editor__scale {
+  width: 240px;
+  height: 2px;
+
+  background-color: black;
+}
+
+.photo-editor__range-toggle {
+  position: absolute;
+  top: -8px;
+  left: 120px;
   width: 14px;
   height: 15px;
 
@@ -119,28 +114,11 @@
   border-radius: 50%;
   background-color: @bg-lightgray;
   cursor: pointer;
+
+  &:active {
+    background-color: @style-red;
+  }
 }
-
-// .photo-editor__slider::-ms-thumb {
-//   appearance: none;
-//   width: 14px;
-//   height: 15px;
-
-//   border: 2px solid @style-red;
-//   border-radius: 50%;
-//   background-color: @bg-lightgray;
-//   cursor: pointer;
-// }
-
-// .photo-editor__slider::-ms-track {
-//   width: 240px;
-//   cursor: pointer;
-
-//   /* Hides the slider so custom styles can be added */
-//   background: transparent;
-//   border-color: transparent;
-//   color: transparent;
-// }
 
 .photo-editor__button {
   width: 280px;
@@ -270,11 +248,16 @@
   .photo-editor__slider {
     display: inline-block;
     margin-left: auto;
+  }
+
+  .photo-editor__scale {
     width: 202px;
   }
 
   .photo-editor__control--active .photo-editor__slider {
-    position: static;
+    position: relative;
+    left: 0;
+    bottom: 0;
   }
 
   .photo-editor__button {
@@ -334,7 +317,7 @@
     height: 32px;
   }
 
-  .photo-editor__slider {
+  .photo-editor__scale {
     width: 288px;
   }
 
