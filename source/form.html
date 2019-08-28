@@ -113,8 +113,8 @@
             <input type="text" name="mid-name" id="input-mid-name" placeholder="Ну и отчество тоже">
           </p>
         </div>
-        <fieldset class="form__results">
-          <div class="container">
+        <div class="form__results-wrapper">
+          <fieldset class="form__results container">
             <legend>Ваши безбашенные достижения в путешествии</legend>
             <ul class="form__results-list">
               <li class="form__results-item filter-option">
@@ -142,18 +142,19 @@
                 <label for="filter-hotel">Разгромил отель</label>
               </li>
             </ul>
-          </div>
-        </fieldset>
+          </fieldset>
+        </div>
         <fieldset class="form__contacts container">
           <legend>Контактная информация</legend>
-          <p>
-            <label for="user-phone">Номер телефона</label>
-            <input name="phone" id="user-phone" type="tel" placeholder="Номер, пожалуйста" pattern="+7([0-9]{3})">
-          </p>
-          <p>
-            <label for="user-mail">Адрес почты</label>
-            <input name="mail" id="user-mail" type="email" placeholder="Введите почту *" required>
-          </p>
+          <div class="form__contacts-wrapper">
+            <p class="form__user-tel">
+              <input name="phone" id="user-phone" type="tel" placeholder="Номер, пожалуйста">
+              <label for="user-phone">Номер телефона</label>
+            </p>
+            <p class="form__user-mail">
+              <input name="mail" id="user-mail" type="email" placeholder="Введите почту *" required>            <label for="user-mail">Адрес почты</label>
+            </p>
+          </div>
         </fieldset>
         <div class="form__applications-wrapper">
           <fieldset class="form__applications">
