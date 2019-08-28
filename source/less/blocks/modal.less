@@ -1,0 +1,55 @@
+.modal {
+  display: none;
+  position: fixed;
+  width: @mobile-width;
+  box-sizing: border-box;
+  z-index: 10;
+  top: 50%;
+  left: 50%;
+
+  text-align: center;
+  background-color: white;
+  box-shadow: 0 7px 15px rgba(0, 0, 0, 0.15);
+
+  transform: translate(-50%, -50%);
+}
+
+.modal-confirm {
+  display: none;
+}
+
+.modal__intro {
+  margin: 40px 20px 25px;
+
+  color: black;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.modal__info {
+  margin: 0 auto 30px;
+  width: 265px;
+}
+
+.modal__button-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  min-height: 163px;
+
+  background-color: #f2f2f2;
+}
+
+.modal button {
+  width: 276px;
+  height: 59px;
+
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 30px;
+
+  border: solid 2px #2aab6d;
+  background-color: #2aab6d;
+}
