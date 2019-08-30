@@ -1,26 +1,5 @@
-@font-face {
-  font-family: "Open Sans";
-  src: url("../fonts/opensans.woff2") format("woff2"), url("../fonts/opensans.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Open Sans";
-  src: url("../fonts/opensansbold.woff2") format("woff2"), url("../fonts/opensansbold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Open Sans";
-  src: url("../fonts/opensanslight.woff2") format("woff2"), url("../fonts/opensanslight.woff") format("woff");
-  font-weight: 300;
-  font-style: normal;
-}
-
-@import "normalize.less";
 @import "variables.less";
+@import "normalize.less";
 @import "blocks/page-header.less";
 @import "blocks/logo.less";
 @import "blocks/main-nav.less";
@@ -33,69 +12,9 @@
 @import "blocks/copyright.less";
 @import "blocks/reviews.less";
 @import "blocks/price.less";
-
-.visually-hidden:not(:focus):not(:active) {
-  position: absolute;
-
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-
-  white-space: nowrap;
-
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
-body {
-  min-width: 320px;
-
-  font-family: "Open Sans", "Arial", sans-serif;
-  font-size: 14px;
-  line-height: 24px;
-  font-weight: 400;
-  color: @text-darknavy;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-.container {
-  margin: 0 auto;
-  width: @mobile-width - 40px;
-}
-
-.button {
-  box-sizing: content-box;
-  padding: 0;
-  width: 6px;
-  height: 6px;
-
-  border: 0;
-  border-radius: 50%;
-  background-color: @text-darknavy;
-  opacity: 0.3;
-
-  &--active {
-    border: 3px solid @text-darknavy;
-    background-color: white;
-    opacity: 1;
-  }
-}
-
-@media (min-width: @tablet-width) {
-  .container {
-    width: @tablet-width - 40px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .container {
-    width: @desktop-width  - 260px;
-  }
-}
+@import "blocks/contacts.less";
+@import "blocks/map.less";
+@import "blocks/photo-editor.less";
+@import "blocks/form.less";
+@import "blocks/modal.less";
+@import "scaffolding.less";

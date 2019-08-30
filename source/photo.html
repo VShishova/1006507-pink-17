@@ -2,10 +2,17 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <title>HTML Academy: Пинк</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="format-detection" content="telephone=no">
-    <title>HTML Academy: Пинк</title>
+    <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/opensanslight.woff2" as="font" crossorigin="anonymous">
     <link href="css/style.min.css" rel="stylesheet">
+    <script>
+      document.createElement( "picture" );
+    </script>
+    <script src="js/picturefill.js" async></script>
   </head>
   <body>
     <div style="display: none">
@@ -81,14 +88,14 @@
                 <a href="form.html">Конкурс</a>
               </li>
               <li class="main-nav__item">
-                <a href="#">HTML Academy</a>
+                <a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
               </li>
             </ul>
           </nav>
         </div>
       </div>
       <div class="page-header__intro-wrapper page-header__intro-wrapper--inner-page container">
-        <p class="page-header__slogan">Фотографии пользователей</p>
+        <p class="page-header__slogan">Фотографии<br>пользователей</p>
       </div>
     </header>
 
@@ -217,6 +224,62 @@
           </li>
         </ul>
       </section>
+      <section class="photo-editor">
+        <div class="container">
+          <p class="photo-editor__intro">Затмите их всех!</p>
+          <p class="photo-editor__intro">Выкладывайте все, что накопилось в телефоне!</p>
+        </div>
+        <div class="photo-editor__wrapper">
+          <div class="photo-editor__form-wrapper container">
+            <picture>
+              <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-road-desktop@1x.webp 1x, img/photo-road-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-road-tablet@1x.webp 1x, img/photo-road-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/photo-road-mobile@1x.webp 1x, img/photo-road-mobile@2x.webp 2x">
+              <source media="(min-width: 1200px)" srcset="img/photo-road-desktop@1x.jpg 1x, img/photo-road-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/photo-road-tablet@1x.jpg 1x, img/photo-road-tablet@2x.jpg 2x">
+              <img class="photo-editor__image" src="img/photo-road-mobile@1x.jpg" srcset="img/photo-road-mobile@2x.jpg 2x" width="280" height="374" alt="Фотография для редактирования">
+            </picture>
+            <form class="photo-editor__form" method="post" action="https://echo.htmlacademy.ru">
+              <ul class="photo-editor__controls">
+                <li class="photo-editor__control photo-editor__control--active">
+                  <label class="photo-editor__label" for="slider-crop" aria-label="Обрезка">
+                    <svg class="photo-editor__image-crop" width="44" height="44" fill="#d22856" viewbox="0 0 48 48"><use xlink:href="#icon-editor-crop"></use></svg>
+                  </label>
+                  <input class="visually-hidden" type="range" id="slider-crop" name="crop">
+                  <div class="photo-editor__slider">
+                    <div class="photo-editor__scale"></div>
+                    <div  class="photo-editor__range-toggle"></div>
+                  </div>
+                </li>
+                <li class="photo-editor__control">
+                  <label class="photo-editor__label" for="slider-fill" aria-label="Заливка">
+                    <svg class="photo-editor__image-fill" width="48" height="43" fill="#283645" viewbox="0 0 48 43"><use xlink:href="#icon-editor-fill"></use></svg>
+                  </label>
+                  <input class="visually-hidden" type="range" id="slider-fill" name="fill">
+                  <div class="photo-editor__slider">
+                    <div class="photo-editor__scale"></div>
+                    <div  class="photo-editor__range-toggle"></div>
+                  </div>
+                </li>
+                <li class="photo-editor__control">
+                  <label class="photo-editor__label" for="slider-contrast" aria-label="Контрастность">
+                    <svg class="photo-editor__image-contrast" width="32" height="32" viewbox="0 0 32 32" fill="#283645"><use xlink:href="#icon-editor-contrast"></use></svg>
+                  </label>
+                  <input class="visually-hidden" type="range" id="slider-contrast" name="contrast">
+                  <div class="photo-editor__slider">
+                    <div class="photo-editor__scale"></div>
+                    <div  class="photo-editor__range-toggle"></div>
+                  </div>
+                </li>
+              </ul>
+              <div class="photo-editor__buttons">
+                <button class="photo-editor__button photo-editor__button--active" type="submit">Запостить</button>
+                <button class="photo-editor__button" type="button">Отмена</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
 
     </main>
 
@@ -266,20 +329,20 @@
 
       <ul class="page-footer__social social">
         <li class="social__item">
-          <a class="social__link social__link--twitter" href="https://vk.com/htmlacademy"><span class="visually-hidden">Мы в Твиттере</span></a>
+          <a class="social__link social__link--twitter" href="https://twitter.com/htmlacademy"><span class="visually-hidden">Мы в Твиттере</span></a>
         </li>
         <li class="social__item">
           <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy"><span class="visually-hidden">Мы в Фейсбуке</span></a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--youtube" href="https://www.instagram.com/htmlacademy"><span class="visually-hidden">Мы в youtube</span></a>
+          <a class="social__link social__link--youtube" href="https://www.youtube.com/htmlacademy"><span class="visually-hidden">Мы в youtube</span></a>
         </li>
       </ul>
 
       <div class="page-footer__copyright copyright">
         <span class="copyright__text">Разработано:</span>
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.943px" height="34px" viewBox="0 0 26.943 34.09" enable-background="new 0 0 26.943 34.09" xml:space="preserve">
+          <svg x="0px" y="0px" width="27" height="34" viewBox="0 0 26.943 34.09">
             <path fill="#d22856" d="M13.62,0.017L13.472,0L0,1.412v24.661l13.472,8.017l13.43-7.99l0.042-0.026V1.412L13.62,0.017z M25.019,12.127L13.495,5.334 l-0.001-0.104L13.407,5.28l-0.088-0.056v0.109L1.925,12.118V3.147l11.547-1.212l11.547,1.212V12.127z M13.405,6.787L24.923,13.5 l-4.479,2.64l-7.093-4.221l-0.013,1.415l5.904,3.513l-0.86,0.507l-5.031-2.992l-0.013,1.415l3.827,2.275l-0.782,0.523l-3.032-1.787 l-0.013,1.413l1.852,1.091l-1.8,1.081L2.034,13.622L13.405,6.787z M1.925,15.127l11.411,6.791l0.015,1.044l-7.941-4.728L5.395,19.65 l7.979,4.796l0.017,1.076l-7.972-4.741l-0.013,1.415l8.021,4.821l0.045,0.026l8.143-4.872v-1.268l-0.011-0.148v-3.761l3.415-2.036 v10.02L13.472,31.85L1.925,24.979V15.127z"></path>
           </svg>
         </a>
@@ -287,7 +350,7 @@
 
     </footer>
 
-    <script>
+    <!-- <script>
       var navMain = document.querySelector('.main-nav');
       var navToggle = document.querySelector('.main-nav__toggle');
       var pageHeader = document.querySelector('.page-header');
@@ -307,6 +370,6 @@
           pageHeader.classList.add('page-header--no-menu');
         }
       });
-    </script>
+    </script> -->
   </body>
 </html>

@@ -1,9 +1,36 @@
 .reviews {
-  margin-top: 40px;
+  margin: 40px 0;
 }
 
 .reviews__list {
   text-align: center;
+}
+
+.reviews__switch {
+  display: none;
+  position: absolute;
+  top: 28px;
+
+  padding: 0;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  background-color: transparent;
+  opacity: 0.3;
+
+  &--next {
+    right: 0;
+  }
+
+  &:focus,
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
 }
 
 .reviews__item {
@@ -40,6 +67,7 @@
 @media (min-width: @tablet-width) {
   .reviews {
     margin-top: 29px;
+    margin-bottom: 17px;
   }
 
   .reviews__item {
@@ -89,6 +117,10 @@
       background-repeat: no-repeat;
       background-position: center;
     }
+  }
+
+  .reviews__switch {
+    display: block;
   }
 
   .reviews__item {
