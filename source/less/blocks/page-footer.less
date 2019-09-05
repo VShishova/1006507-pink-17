@@ -1,6 +1,7 @@
 .page-footer {
   text-align: center;
   min-height: 284px;
+  box-sizing: border-box;
 }
 
 .page-footer--index {
@@ -21,8 +22,9 @@
   .page-footer {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     min-height: 127px;
+
+    padding-top: 36px;
   }
 
   .page-footer--index {
@@ -38,22 +40,16 @@
     margin: 0;
     margin-right: -15px;
   }
-
-  .logo--footer {
-    margin-top: -16px;
-  }
-
-  .page-footer__copyright {
-    margin-top: -7px;
-  }
 }
 
 @media (min-width: @desktop-width) {
   .page-footer {
-    min-height: 145px;
+    min-height: 170px;
+    padding-top: 44px;
 
     &--index {
       min-height: 205px;
+      padding-top: 72px;
     }
   }
 
